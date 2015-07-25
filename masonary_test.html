@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Masonry Testing</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.js"></script>
+	<!-- or -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
+	<script src="/path/to/masonry.pkgd.min.js"></script>
+	<script type="text/javascript">
+	* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: #EEE;
+  max-width: 1200px;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  width: 20%;
+  // height: 120px;
+  float: left;
+  background: #D26;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
+
+.grid-item--width2 { width: 320px; }
+.grid-item--width3 { width: 480px; }
+.grid-item--width4 { width: 640px; }
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+.grid-item--height4 { height: 360px; }
+</script>
+</head>
+
+<body>
+<script type="text/javascript">
+$(document).ready( function() {
+  $('.grid').masonry({
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+  	percentPosition: true
+  });  
+});
+</script>
+
+<div class="grid">
+  <div class="grid-sizer"><img src="cat1.jpeg"></div>
+  <div class="grid-item grid-item--width2 grid-item--height2"><img src="cat1.jpeg"></div>
+  <div class="grid-item grid-item--height3"><img src="cat2.jpeg"></div>
+  <div class="grid-item grid-item--height2"><img src="cat3.jpeg"></div>
+  <div class="grid-item grid-item--width3"><img src="cat4.jpeg"></div>
+  <div class="grid-item"><img src="cat5.jpeg"></div>
+  <div class="grid-item"><img src="cat6.jpeg"></div>
+  <div class="grid-item grid-item--height2"><img src="cat7.jpeg"></div>
+  <div class="grid-item grid-item--width2 grid-item--height4"><img src="cat8.jpeg"></div>
+  <div class="grid-item"><img src="cat9.jpeg"></div>
+  <div class="grid-item grid-item--height2"><img src="cat1.jpeg"></div>
+  <div class="grid-item"><img src="cat1.jpeg"></div>
+  <div class="grid-item grid-item--width2 grid-item--height2"><img src="cat1.jpeg"></div>
+  <div class="grid-item grid-item--width2"><img src="cat1.jpeg"></div>
+  <div class="grid-item"><img src="cat1.jpeg"></div>
+  <div class="grid-item grid-item--height2"><img src="cat3.jpeg"></div>
+  <div class="grid-item"><img src="cat1.jpeg"></div>
+  <div class="grid-item"><img src="cat1.jpeg"></div>
+  <div class="grid-item grid-item--height3"><img src="cat4.jpeg"></div>
+  <div class="grid-item grid-item--height2"><img src="cat6.jpeg"></div>
+  <div class="grid-item"><img src="cat1.jpeg"></div>
+  <div class="grid-item"><img src="cat1.jpeg"></div>
+  <div class="grid-item grid-item--height2"><img src="cat1.jpeg"></div>
+</div>
+
+
+	</div>
+	
+
+</body>
+</html>
